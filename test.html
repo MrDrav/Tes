@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Visit Indonesia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <span class="logo">Esigned</span>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="do.html">What we do</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+        <input type="text" class="search-box" placeholder="Search">
+    </nav>
+    <div class="hero">
+        <div class="overlay">
+            <h1>Visit Indonesia</h1>
+            <p>Explore the natural beauty of our mountains and islands.</p>
+        </div>
+    </div>
+
+    <div class="second-hero">
+        <!-- Optional content -->
+    
+        <div class="gallery-container" id="galleryContainer"></div>
+
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const container = document.getElementById('galleryContainer');
+        for (let i = 0; i < 10; i++) {
+            container.innerHTML += `
+                <a href="destination-page-${i+1}.html" class="image-container" style="text-decoration: none; color: inherit;">
+                    <img src="SCBD.jpg" alt="Collection ${i+1}">
+                    <div class="info-overlay">
+                        <div class="info-title">Collection Name ${i+1}</div>
+                        <div class="info-address">123 Example Address, City ${i+1}</div>
+                    </div>
+                </a>
+            `;
+        }
+    });
+</script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
