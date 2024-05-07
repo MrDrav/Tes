@@ -1,0 +1,160 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto; /* Allow the body and html to grow as needed */
+    min-height: 100vh; /* Minimum height should still cover the viewport */
+    overflow-x: hidden; /* Hides horizontal scrollbar if any */
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 15px;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: #aad3df;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-box {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background: white;
+    color: black;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    min-height: 100vh;
+    background: url('JKT.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+}
+
+.second-hero {
+    min-height: 100vh;
+    width: 100vw; /* Full viewport width */
+    background: url('BNDR.jpg') no-repeat center center;
+    background-size: cover; /* Covers the entire area of the element */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    overflow: hidden; /* Ensures no scrolling within this container */
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.image-container {
+    flex: 1 1 20%; /* Adjusts the number of items per row to five */
+    margin: 10px;
+    height: auto; /* Allows the container to adjust height based on content */
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #fff; /* Adds background color to improve readability */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Adds subtle shadow for depth */
+}
+
+.image-container img {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover;
+    border-top-left-radius: 8px; /* Rounds the top corners of the image */
+    border-top-right-radius: 8px;
+}
+
+.info-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay for text */
+    color: white;
+    padding: 10px;
+    font-size: 14px; /* Increases font size for readability */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-title, .info-address {
+    text-align: center; /* Centers the text within the overlay */
+    width: 100%;
+    padding: 2px 0; /* Adds padding to space out the text lines */
+}
+
+@media (min-width: 1024px) {
+    .image-container {
+    flex: 1 1 20%; /* Show 5 containers per row /
+    max-width: 20%; / Ensures each container does not exceed 20% of the container width */
+    }
+    }
+    
+    @media (min-width: 1920px) {
+    .image-container {
+    flex: 1 1 15%; /* Adjusts to show more containers per row on very large screens */
+    max-width: 20%;
+    }
+    }
